@@ -1,38 +1,370 @@
-.App {
-  text-align: center;
+/* *{
+  background-color:#191c24;
+  color: white;
+} */
+.dashboard-container{
+  display: grid;
+  grid-template-columns:20% 80%;;
+  /* column-gap: 20px; */
+  
+ }
+ .dashboard-container.collapsed {
+  grid-template-columns: 100px 93%;
+ }
+
+ .dashboard-container.collapsed .side-nav-bar {
+  width: 100px; /* Collapsed width */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.side-nav-bar{
+  border: 1px solid black;
+  background-color: #191c24;
+  /* height: 100vh; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+ .maincontainer-wrapper{
+  border: 1px solid black;
+  /* height: 100vh; */
+  /* border-radius: 5px; */
+  
+  box-shadow: 18px 5px 3px white;
+
+ }
+
+ 
+ .topNavbar{
+height:80px;
+  border: 1px solid black;
+  background-color: #191c24;
+  ;
+ }
+ .main-part{
+  border: 1px solid black;
+  /* margin-top: 20px; */
+  height: 120vh;
+  background-color: #000000;
+ }
+ .sidebar-wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+ }
+ .logo-icon img {
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+ }
+ 
+
+.logo-icon .collapsed{
+  /* width: 20px; */
+  height: 90px;
+}
+
+ .icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  /* justify-content: center; */
+  width: 100%;
+ }
+
+.icons img{
+  width: 50px;
+  /* border: 1px solid grey; */
+  margin: 20px;
+  padding: 5px;
+  /* background-color: gray; */
+  /* border-radius: 50%; */
+  /* text-decoration: none; */
+
+ }
+.icons NavLink{
+ text-decoration: none;
+  
+ }
+
+ .navlink{
+  text-decoration: none;
+ }
+ .nav-items{
   color: white;
+  text-decoration: none;
+ }
+ .icons:hover{
+  background-color: rgb(10, 10, 49);
+  border: 1px solid black;
+  border-top-right-radius: 40px ;
+  border-bottom-right-radius: 40px ;
+
+  /* padding: 20px; */
+  
+ }
+ .sideNav-botton-icons{
+  margin-top: 80px;
+  width: 100%;
+
+
+ }
+
+
+.active-link  .nav-items{
+color: coral;
+text-shadow: #191c24;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-style: oblique;
+
 }
 
-.App-link {
-  color: #61dafb;
+/* ///////Horizontal nav bar */
+.topNavbarWrapper{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBarHambuger{
+/* border: 1px solid black; */
+
+}
+.navBarHambuger img{
+  width: 50px;
+  transition: transform .2s;
+}
+.navBarHambuger img:hover{
+transform: scale(1.05);
+}
+.search-input{
+  border: 1px solid black;
+  height: 50px;
+  width: 60%;
+  background-color: rgb(222, 128, 94);
+ border-radius: 10px;
+margin-top: 10px;
+
+}
+.search-input input{
+  width: 90%;
+  padding: 5px;
+ margin-top: 6px;
+ border-radius: 10px;
+ transition: transform .2s;
+}
+.search-input input:hover{
+  transform: scale(1.03);
+
+}
+
+
+.hor-nav-icons{
+  width: 40px;
+  cursor: pointer;
+
+ transition: transform .2s;
+
+}
+.hor-nav-icons:hover{
+
+  transform: scale(1.2);
+  
+
+}
+.profile-icon img{
+  border-radius: 50%;
+}
+#profile-text{
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+/* .dot-on-profile {
+  color: red;
+ font-size: 30px;
+  
+} */
+ .dot-icon{
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  top: -5px;
+ }
+ /* //////mainacontainer css */
+
+
+ .mainContainerCards{
+  display: flex;
+  /* border:  10px solid white; */
+  margin: 20px;
+  justify-content: center;
+  justify-content: space-between;
+
+
+ }
+
+.main-cards{
+  border: 1px solid black;
+  width: calc(30%);
+  background-color: #191c24;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 3px -3px 10px 191c24;
+}
+ 
+ .main-cards img {
+  width: 100px;
+
+  
+ }
+ /* ////chat-calender css */
+
+
+ .chat-cal{
+  /* border: 10px solid wheat; */
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 65% 35% ;
+
+  
+ }
+ .graph1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #191c24;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  height: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.stats {
+  margin-bottom: -20px; /* Space between stats and chart */
+  width: 100%; /* Take full width to align with chart */
+  text-align: center;
+}
+
+.stat-item {
+  margin: 10px 0;
+}
+
+.stat-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.stat-item p,
+.stat-item ul {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.stat-item ul li {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.graph{
+  display: flex;
+  flex-direction: row;
+}
+ 
+ .calender p{
+  color:black
+
+ }
+
+ /* Ensure the container for the calendar takes up the full width */
+/* CalendarStyles.css */
+
+
+.react-calendar {
+  background-color: #191c24; /* Your desired background color */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+.react-calendar__navigation {
+  background-color: coral;/* Header background color */
+  color: white; /* Header text color */
+}
+
+
+.react-calendar__month-view__days__day {
+  color: coral; /* Day text color */
+}
+
+
+.react-calendar__month-view__days__day--active {
+  background-color: #191c24; /* Active day background color */
+  color: white; /* Active day text color */
+}
+
+/* Change the color of the selected day */
+.react-calendar__tile--active {
+  background-color: #007bff; /* Selected day background color */
+  color: white; /* Selected day text color */
+}
+
+/* Change the color of the hovered day */
+.react-calendar__tile:hover {
+  background-color:coral /* Hover background color */
+}
+
+/* /////graph data */
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////view-details styling */
+.view-details{
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 20px;
+  color: white;
+  background-color: #191c24;
+  font-style: oblique;
+}
+
+.view-details img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.view-details h1{
+  color: coral;
 }
